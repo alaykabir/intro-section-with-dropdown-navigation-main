@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  font-family: 'Epilogue', sans-serif;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(0, 0%, 98%);
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* utility classes */
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/*  NAVBAR */
+/* general styling */
+
+
+.logo {
+  background-color: white;
+  /* margin: 2.5rem 0 2rem 1.5rem; */
+  margin: 2rem;
+}
+
+.arr-down {
+  height: 6px;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-header {
+  align-items: center;
+}
+
+nav {
+  /* background-color: red; */
+  min-width: 85%;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  /* margin: 0 0.5rem 0 1rem; */
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem 0 1.5rem;
+  color: hsl(0, 0%, 30%);
+}
+
+.feature:hover {
+  color: black;
+}
+
+.drop-down-list-1 {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px hsl(0, 0%, 74%);
+  padding: 0.5rem 1.5rem;
+}
+
+.drop-down-list-2 {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  top: 5rem;
+  left: 17rem;
+
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px hsl(0, 0%, 74%);
+  padding: 0.5rem 1.5rem;
+}
+
+.drop-down-list-1[drop-list-visible="true"] {
+  display: block;
+}
+
+.drop-down-list-2[drop-list-visible="true"] {
+  display: block;
+}
+
+.company:hover {
+  color: black;
+}
+
+#career:hover {
+  color: black;
+}
+
+#about:hover {
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* MAIN BODY */
+
+.main-body {
+  /* border: 2px solid red; */
+}
+
+.main-info {
+  flex-direction: column;
+}
+
+.client-img {
+  align-items: center;
+}
+
+.hero-mobile {
+  display: none;
+}
+
+.login {
+  border: none;
+  color: hsl(0, 0%, 30%);
+  background-color: white;
+  margin-top: 0.4rem;
+}
+
+.register {
+  color: hsl(0, 0%, 30%);
+  border: 1px solid hsl(0, 0%, 30%);
+  background-color: white;
+  border-radius: 12px;
+  height: 2.5rem;
+  width: 7rem;
+  margin: 0;
+}
+
+.login:hover {
+  color: black;
+}
+
+.register:hover {
+  border: 1px solid black;
+  color: black;
+}
+
+@media(min-width: 751px) {
+
+  .main-body {
+    /* border: 2px solid black; */
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10rem; */
+    margin: 0 5rem;
+  }
+
+  .main-info {
+    /* border: 2px solid red; */
+    gap: 0;
+    text-align: left;
+    /* margin: 4rem 6rem; */
+    /* margin-left: 10rem; */
+    /* margin-right: 0; */
+    /* margin-bottom: 0; */
+    /* padding: 2rem 20rem 0 2rem; */
+    /* padding-left: 2rem; */
+  }
+
+  .main-heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .main-description {
+    color: hsl(0, 0%, 30%);
+    /* padding-right: 20rem; */
+    margin-bottom: 3rem;
+  }
+
+  .main-btn {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+    outline: none;
+    margin-bottom: 6rem;
+  }
+
+  .main-btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 0.5s;
+  }
+
+  .client-img {
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-desktop {
+    min-height: 500px;
+    max-width: 450px;
+  }
+
+  .main-img {
+    /* margin-right: 6rem; */
+  }
+}
+
+@media (max-width: 750px) {
+  .primary-navigation {
+    /* border: 2px solid red; */
+    /* Because It keeps the navigation fixed 
+    so that the scrolling does not bother it. */
+    position: fixed;
+    z-index: 1000;
+    /* inset is used for positioning the div 
+    0 -> It makes the border touch the respective screen.*/
+    /* t  l   b   r*/
+    inset: 0 0 0 30%;
+
+    /* It choose minimum of whichever padding for top/bottom is required */
+    /* for top buttons */
+    padding: min(20vh, 5rem) 2em;
+
+    /* for positioning of login buttons */
+    padding-bottom: 18rem;
+
+    flex-direction: column;
+
+    transform: translateX(100%);
+
+    background-color: white;
+    /* background-color: lightsteelblue; */
+    transition: transform 0.2s ease-out;
+  }
+
+  .nav-list-btn-1 {
+    /* border: 2px solid red; */
+    flex-direction: column;
+  }
+
+  .nav-list-btn-2 {
+    /* border: 2px solid red; */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* width: 100%; */
+    /* padding: 0; */
+  }
+
+  .login {
+    border: none;
+    color: hsl(0, 0%, 30%);
+    background-color: white;
+  }
+
+  .register {
+    color: hsl(0, 0%, 30%);
+    border: 1px solid hsl(0, 0%, 30%);
+    background-color: white;
+    border-radius: 12px;
+    height: 3rem;
+    width: 15rem;
+  }
+
+  .login:hover {
+    color: black;
+  }
+
+  .register:hover {
+    border: 1px solid black;
+    color: black;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+    transition: transform 0.2s ease-in;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    background-image: url(images/icon-menu.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(images/icon-close-menu.svg);
+    background-repeat: no-repeat;
+  }
+
+  body[black-out="true"] {
+    background-color: rgb(181, 181, 181, 0.6);
+  }
+
+
+  .drop-down-list-1 {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .drop-down-list-2 {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* General styling */
+
+  .main-img {
+    margin: 0;
+  }
+
+  .hero-desktop {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+
+  .main-body {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    /* border: 2px solid red; */
+  }
+
+  .main-heading {
+    font-weight: 700;
+    /* width: 100%; */
+    /* border: 2px solid red; */
+    margin: 0.5rem 0 0 0;
+    font-size: 2rem;
+  }
+
+  .main-description {
+    /* border: 2px solid yellow; */
+    padding: 1rem;
+  }
+
+  .btn {
+    /* border: 2px solid yellow; */
+  }
+
+  .main-btn {
+    height: 3rem;
+    width: 9rem;
+    border: none;
+    border-radius: 0.8rem;
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+    outline: none;
+    /* margin-left: 6.5rem; */
+  }
+
+  .main-btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 0.5s;
+  }
+
+  .client-img {
+    /* border: 2px solid red; */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media(max-width: 400px) {
+    .client-img {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

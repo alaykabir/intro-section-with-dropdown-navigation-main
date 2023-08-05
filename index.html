@@ -1,39 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Features
-  Company
-  Careers
-  About
+<body black-out="false">
+  <header class="primary-header flex">
+    <div>
+      <img src="images/logo.svg" alt="logo" class="logo">
+    </div>
 
-  Login
-  Register
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only"></span> </button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <div class="nav-list-btn-1 flex">
+          <li class="feature" feature-list="false">
+            Features
+            <img src="images/icon-arrow-down.svg" class="arr-down" alt="arrow-down">
+            <div class="drop-down-list-1 flex" drop-list-visible="false">
+              <div>
+                <img src="images/icon-todo.svg" alt="">
+                Todo List
+              </div>
+              <div>
+                <img src="images/icon-calendar.svg" alt="">
+                Calender
+              </div>
+              <div>
+                <img src="images/icon-reminders.svg" alt="">
+                Reminder
+              </div>
+              <div>
+                <img src="images/icon-planning.svg" alt="">
+                Planning
+              </div>
+            </div>
+          </li>
+          <li class="company" company-list="false">
+            Company
+            <img src="images/icon-arrow-down.svg" class="arr-down" alt="arrow-down">
+            <div class="drop-down-list-2 flex" drop-list-visible="false">
+              <div>
+                History
+              </div>
+              <div>
+                Our Team
+                <div>
+                  Blog
+                </div>
+              </div>
+          </li>
+          <li id="career">
+            Careers
+          </li>
+          <li id="about">
+            About
+          </li>
+        </div>
+        <div class="nav-list-btn-2 flex">
+          <li>
+            <button class="login">Login</button>
+          </li>
+          <li>
+            <button class="register">Register</button>
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <section class="main-body flex">
+    <div class="main-info flex">
+      <h1 class="main-heading">
+        Make <br> remote work
+      </h1>
+      <p class="main-description">
 
-  Make remote work
+        Get your team in sync, no matter your location. <br> Streamline processes,
+        create team rituals, and <br>watch productivity soar.
+      </p>
+      <div class="btn">
+        <button class="main-btn">Learn More</button>
+      </div>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+      <div class="client-img flex">
+        <img src="images/client-databiz.svg" alt="databiz">
+        <img src="images/client-audiophile.svg" alt="audiophile">
+        <img src="images/client-meet.svg" alt="meet">
+        <img src="images/client-maker.svg" alt="maker">
+      </div>
+    </div>
+    <div class="main-img">
+      <img src="images/image-hero-desktop.png" alt="" class="hero-desktop">
+      <img src="images/image-hero-mobile.png" alt="" class="hero-mobile">
+    </div>
+  </section>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
